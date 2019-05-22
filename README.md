@@ -1,2 +1,3 @@
-# Berikut beberapa Tools dan Tutorial yang dapat digunakan untuk Incident Response 
+# Incident Response Tools
+
 # Identifikasi dan Analisis
