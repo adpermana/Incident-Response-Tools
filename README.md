@@ -49,16 +49,15 @@
 # IP Analysis
  - Whois IP Lookup : https://www.ultratools.com/tools/ipWhoisLookupResult
  - IP Analysis :
-    https://www.ipalyzer.com/
-    https://www.ipvoid.com/
-    https://mxtoolbox.com/blacklists.aspx
+    - https://www.ipalyzer.com/
+    - https://www.ipvoid.com/
+    - https://mxtoolbox.com/blacklists.aspx
  - IP Reputation : https://www.talosintelligence.com/reputation_center
  - Trace History IP :
-    https://www.riskiq.com/
-    https://archive.org/web/
+    - https://www.riskiq.com/
+    - https://archive.org/web/
 
 Referensi : 
-https://github.com/meirwah/awesome-incident-response
-https://github.com/Cugu/awesome-forensics
-https://www.alienvault.com/resource-center/ebook/insider-guide-to-incident-response/incident-response-tools
-
+- https://github.com/meirwah/awesome-incident-response
+- https://github.com/Cugu/awesome-forensics
+- https://www.alienvault.com/resource-center/ebook/insider-guide-to-incident-response/incident-response-tools
