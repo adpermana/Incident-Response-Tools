@@ -11,6 +11,7 @@
  - Firewall 
    * PFSense >> https://www.pfsense.org/
    * PFSense Download Virtual >> https://www.pfsense.org/download/
+   * IPFire >> https://www.ipfire.org/download/ipfire-2.23-core136
  - Network Intrusion Detection System (NIDS)
    * SNORT >> https://www.snort.org/
    * SNORTER >> https://github.com/joanbono/Snorter
