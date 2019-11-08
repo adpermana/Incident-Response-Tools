@@ -8,6 +8,7 @@
 # Detection System
  - Monitoring System 
    * Security Onion >> https://github.com/Security-Onion-Solutions/security-onion/blob/master/Verify_ISO.md
+   * Cacti >> https://www.cacti.net/download_cacti.php
  - Firewall 
    * PFSense >> https://www.pfsense.org/
    * PFSense Download Virtual >> https://www.pfsense.org/download/
@@ -33,9 +34,15 @@
    
 # Investigation on Linux Server
  - Network Analysis
+   * Netstat Command in Linux >> https://www.rekha.com/netstat-cheat-sheet-for-newbies.html
+   * Netstat Command in Linux >> https://www.tecmint.com/20-netstat-commands-for-linux-network-management/
+   * TCPDump Cheat Sheet >> https://www.andreafortuna.org/2018/07/18/tcpdump-a-simple-cheatsheet/
  - Directory Analysis
+   * Linux Cheat Sheet >> http://cheatsheetworld.com/programming/unix-linux-cheat-sheet/
  - Backdoor Search Script
  - Privilege Escalation
+   * PE >> https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/
+   * PE >> https://www.rebootuser.com/?p=1623
  - Process Analysis
  - Log Analysis
  
@@ -45,7 +52,10 @@
  
 # Post Incident Activity
  - Vulnerability Assessment
+   * Pentesting tools >> https://highon.coffee/blog/penetration-testing-tools-cheat-sheet/#osint
+   * Pentesting Cheat Sheet >> https://highon.coffee/blog/cheat-sheet/
  - Hardening
+   * Centos 7 OS >> https://highon.coffee/blog/security-harden-centos-7/
  
 # IP Analysis
  - Whois IP Lookup : https://www.ultratools.com/tools/ipWhoisLookupResult
@@ -53,6 +63,7 @@
     - https://www.ipalyzer.com/
     - https://www.ipvoid.com/
     - https://mxtoolbox.com/blacklists.aspx
+    - https://www.abuseipdb.com/
  - IP Reputation : https://www.talosintelligence.com/reputation_center
  - Trace History IP :
     - https://www.riskiq.com/
