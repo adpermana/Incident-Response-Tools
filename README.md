@@ -42,6 +42,8 @@
  - Directory Analysis
    * Linux Cheat Sheet >> http://cheatsheetworld.com/programming/unix-linux-cheat-sheet/
  - Backdoor Search Script
+   * Grep >> grep -RPn "(passthru|shell_exec|system|phpinfo|base64_decode|chmod|mkdir|fopen|fclose|fclose|readfile) *\(" nama_direktori
+   * Grep >> grep -Rinw nama_direktori -e "nama_string"
  - Privilege Escalation
    * PE >> https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/
    * PE >> https://www.rebootuser.com/?p=1623
@@ -56,6 +58,7 @@
  - Vulnerability Assessment
    * Pentesting tools >> https://highon.coffee/blog/penetration-testing-tools-cheat-sheet/#osint
    * Pentesting Cheat Sheet >> https://highon.coffee/blog/cheat-sheet/
+   * Pentesting Cheat Sheet >> https://ired.team/offensive-security-experiments/offensive-security-cheetsheets
  - Hardening
    * Centos 7 OS >> https://highon.coffee/blog/security-harden-centos-7/
  
