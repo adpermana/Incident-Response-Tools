@@ -75,3 +75,5 @@ Referensi :
 - https://github.com/meirwah/awesome-incident-response
 - https://github.com/Cugu/awesome-forensics
 - https://www.alienvault.com/resource-center/ebook/insider-guide-to-incident-response/incident-response-tools
+- Honeypot : https://github.com/zdresearch/OWASP-Honeypot
+- Honeypot : https://github.com/paralax/awesome-honeypots
