@@ -32,6 +32,7 @@
    * Elasticksearch Logstash Kibana (ELK) >> https://www.elastic.co/what-is/elk-stack
    * Installation ELK >> https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-elk-stack-on-ubuntu-14-04
    * Graylog >> https://www.graylog.org/downloads
+   * EventLog >> https://www.xplg.com/
    
 # Investigation on Linux Server
  - Network Analysis
@@ -47,9 +48,21 @@
  - Privilege Escalation
    * PE >> https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/
    * PE >> https://www.rebootuser.com/?p=1623
+   * LinPeas >> https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS
  - Process Analysis
  - Log Analysis
  
+ # Investigation on Windows OS
+ - Data Collection
+   * Automated Data Collection >> https://github.com/adpermana/Incident-Response-Tools/blob/master/WindowsIR.bat
+   * Windows Command Line Cheat Sheet (SANS) >> https://www.sans.org/security-resources/sec560/windows_command_line_sheet_v1.pdf
+
+# Advanced Persistence Threat (APT)
+- Tools
+  * APT Simulator >> https://github.com/NextronSystems/APTSimulator
+  * APT Scanner >> https://github.com/Neo23x0/Loki dan https://github.com/Neo23x0/Loki/releases
+  * APT Incident Responses Checklist (SANS) >> https://www.sans.org/media/score/checklists/APT-IncidentHandling-Checklist.pdf
+
 # Backup System
  - Backup
  - Imaging
@@ -80,3 +93,4 @@ Referensi :
 - https://www.alienvault.com/resource-center/ebook/insider-guide-to-incident-response/incident-response-tools
 - Honeypot : https://github.com/zdresearch/OWASP-Honeypot
 - Honeypot : https://github.com/paralax/awesome-honeypots
+- Caldera (Attack and Defend Simulator (Mitre Att&ck)) >> https://github.com/mitre/caldera
