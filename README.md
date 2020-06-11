@@ -34,6 +34,12 @@
    * Graylog >> https://www.graylog.org/downloads
    * EventLog >> https://www.xplg.com/
    
+# Automate Data Collection 
+ - Run this shell script on your server :
+   * Ubuntu Server >> curl https://raw.githubusercontent.com/adpermana/Incident-Response-Tools/master/UbuntuIR.sh | sh
+   * Centos Server >> curl https://raw.githubusercontent.com/adpermana/Incident-Response-Tools/master/Centos.sh | sh
+ - After run, output saved to ./Collection.tar.gz
+ 
 # Investigation on Linux Server
  - Network Analysis
    * Netstat Command in Linux >> https://www.rekha.com/netstat-cheat-sheet-for-newbies.html
@@ -56,6 +62,7 @@
  - Data Collection
    * Automated Data Collection >> https://github.com/adpermana/Incident-Response-Tools/blob/master/WindowsIR.bat
    * Windows Command Line Cheat Sheet (SANS) >> https://www.sans.org/security-resources/sec560/windows_command_line_sheet_v1.pdf
+   * Redline >> https://www.fireeye.com/services/freeware/redline.html
 
 # Advanced Persistence Threat (APT)
 - Tools
