@@ -4,11 +4,14 @@ echo "************************************************************"
 echo "Automate Data Collection for Ubuntu Server Script v1.0"
 echo "************************************************************"
 
+# Read Current Directory
+curr=${PWD}
+
 # Create Directory :
-mkdir /root/UbuntuIR
+mkdir $curr/UbuntuIR
 
 # Sesuaikan Directory
-dir=/root/UbuntuIR
+dir=$curr/UbuntuIR
 
 # Identifikasi Date :
 date > $dir/0.DateTime.txt
@@ -39,6 +42,15 @@ cat /etc/passwd | grep "bash"> $dir/16.Daftar_User_Bash.txt
 lastlog > $dir/17.Lastlog.txt
 last > $dir/18.Last.txt
 
+# Searching Backdoor File
+echo "Start Searching ..."
+grep -RPn "(passthru|shell_exec|system|phpinfo|base64_decode|chmod|mkdir|fopen|fclose|fclose|readfile) *\(" /r > $dir/19.Backdoor.txt
+echo "Finish Searching.\n"
+
+# Create Compressed File
+tar -czf Collection.tar.gz UbuntuIR
+rm -rf UbuntuIR
+
 echo "************************************************************"
-echo "Script Completed Succesfully, saved to " $dir
+echo "Script Completed Succesfully, saved to ./Collection.tar.gz"
 echo "************************************************************"
