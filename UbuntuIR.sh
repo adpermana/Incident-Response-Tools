@@ -44,7 +44,7 @@ last > $dir/18.Last.txt
 
 # Searching Backdoor File
 echo "Start Searching ..."
-grep -RPn "(passthru|shell_exec|system|phpinfo|base64_decode|chmod|mkdir|fopen|fclose|fclose|readfile) *\(" /r > $dir/19.Backdoor.txt
+grep -RPn "(passthru|shell_exec|system|phpinfo|base64_decode|chmod|mkdir|fopen|fclose|fclose|readfile) *\(" / > $dir/19.Backdoor.txt
 echo "Finish Searching.\n"
 
 # Create Compressed File
