@@ -4,11 +4,14 @@ echo "************************************************************"
 echo "Automate Data Collection for Centos Server Script v1.0"
 echo "************************************************************"
 
+# Read Current Directory
+curr=${PWD}
+
 # Create Directory :
-mkdir /root/CentosIR
+mkdir $curr/CentosIR
 
 # Sesuaikan Directory
-dir=/root/CentosIR
+dir=$curr/CentosIR
 
 # Identifikasi Date :
 date > $dir/0.DateTime.txt
@@ -39,6 +42,20 @@ cat /etc/passwd | grep "bash"> $dir/16.Daftar_User_Bash.txt
 lastlog > $dir/17.Lastlog.txt
 last > $dir/18.Last.txt
 
+# List Directory
+ls -alrt -R /home > $dir/19.Homedir.txt
+ls -alrt -R /var/www > $dir/20.VarWWWdir.txt
+
+# Searching Backdoor File
+echo "Start Searching ..."
+grep -RPn "(passthru|shell_exec|system|phpinfo|base64_decode|chmod|mkdir|fopen|fclose|fclose|readfile) *\(" /home/ > $dir/21.Backdoor-Homedir.txt
+grep -RPn "(passthru|shell_exec|system|phpinfo|base64_decode|chmod|mkdir|fopen|fclose|fclose|readfile) *\(" /var/www/ > $dir/22.Backdoor-VarWWWdir.txt
+echo "Finish Searching.\n"
+
+# Create Compressed File
+tar -czf Collection.tar.gz CentosIR
+rm -rf CentosIR
+
 echo "************************************************************"
-echo "Script Completed Succesfully, saved to " $dir
+echo "Script Completed Succesfully, saved to ./Collection.tar.gz"
 echo "************************************************************"
