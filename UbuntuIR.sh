@@ -24,9 +24,10 @@ cat /etc/lsb-release > $dir/2.Versi_OS.txt
 ps -aux > $dir/3.Daftar_Proses.txt
 top -b -n 1 > $dir/4.Daftar_Running_App.txt
 cat /root/.bash_history > $dir/5.History.txt
-ls /etc/cron* > $dir/6.Cron.txt
+ls -al /etc/cron* > $dir/6.Cron.txt
 crontab -l > $dir/7.Crontab.txt
-bash -c 'for user in $(cut -f1 -d: /etc/passwd); do echo "Cron jobs for user: $user"; crontab -l -u $user; echo ""; done' > $dir/7-1.Crontab.txt
+ls -al /var/spool/cron/crontab/ > > $dir/7-1.Crontab.txt
+bash -c 'for user in $(cut -f1 -d: /etc/passwd); do echo "Cron jobs for user: $user"; crontab -l -u $user; echo ""; done' > $dir/7-2.Crontab.txt
 
 # Identifikasi Jaring Komunikasi
 netstat -tulnp > $dir/8.Inbound.txt
