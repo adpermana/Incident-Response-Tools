@@ -1,26 +1,16 @@
 #! /bin/bash
 
 echo "************************************************************"
-echo "Automate Data Collection for Ubuntu Server Script v1.0"
+echo "Automate Quarantine Malicious Files"
 echo "************************************************************"
-
-# Reset
-Color_Off='\033[0m'       # Text Reset
-
-# Regular Colors
-Red='\033[0;31m'          # Red
-Green='\033[0;32m'        # Green
-Yellow='\033[0;33m'       # Yellow
-Purple='\033[0;35m'       # Purple
-Cyan='\033[0;36m'         # Cyan
 
 # Read Current Directory
 curr=${PWD}
 
-echo "$Purple Pilihlah Salah Satu Untuk Mitigasi :$Color_Off"
-echo "$Purple [1] Karantina File Backdoor $Color_Off"
-echo "$Purple [2] Karantina File Slot $Color_Off"
-echo -n "$Purple Pilihan Anda : " 
+echo "Pilihlah Salah Satu Untuk Mitigasi :"
+echo "[1] Karantina File Backdoor"
+echo "[2] Karantina File Slot"
+echo -n "Pilihan Anda : " 
 read choice
 
 backdoor_quarantine(){
