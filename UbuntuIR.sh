@@ -26,11 +26,12 @@ top -b -n 1 > $dir/4.Daftar_Running_App.txt
 cat /root/.bash_history > $dir/5.History.txt
 ls /etc/cron* > $dir/6.Cron.txt
 crontab -l > $dir/7.Crontab.txt
+bash -c 'for user in $(cut -f1 -d: /etc/passwd); do echo "Cron jobs for user: $user"; crontab -l -u $user; echo ""; done' > $dir/7-1.Crontab.txt
 
 # Identifikasi Jaring Komunikasi
 netstat -tulnp > $dir/8.Inbound.txt
 netstat -antup > $dir/9.Outbound.txt
-netstat -antup | grep "ESTA" > $dir/10.Established_Conn.txt
+netstat -antup | grep "ESTABLISHED" > $dir/10.Established_Conn.txt
 w > $dir/11.Connected_to_PC.txt
 cat /etc/resolv.conf > $dir/12.DNS.txt
 cat /etc/hostname > $dir/13.Hostname.txt
@@ -50,6 +51,9 @@ ls -alrt -R /var/www > $dir/20.VarWWWdir.txt
 echo "Start Searching ..."
 grep -RPn "(passthru|shell_exec|system|phpinfo|base64_decode|chmod|mkdir|fopen|fclose|fclose|readfile) *\(" /home/ > $dir/21.Backdoor-Homedir.txt
 grep -RPn "(passthru|shell_exec|system|phpinfo|base64_decode|chmod|mkdir|fopen|fclose|fclose|readfile) *\(" /var/www/ > $dir/22.Backdoor-VarWWWdir.txt
+
+# Searching others malicious activity
+grep -Rinw /home -e "slot" -e "gacor" -e "maxwin" -e "thailand" -e "sigmaslot" -e "zeus" -e "cuan" > $dir/23.slot.txt
 echo "Finish Searching.\n"
 
 # Create Compressed File
