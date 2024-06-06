@@ -4,7 +4,7 @@
 
 # Automate Data Collection 
  - Run this shell script on your server :
-   * Ubuntu Server : curl -sO https://raw.githubusercontent.com/adpermana/Incident-Response-Tools/analisa/UbuntuIR.sh && sudo bash ./UbuntuIR.sh
+   * Ubuntu Server : curl -sO https://raw.githubusercontent.com/adpermana/Incident-Response-Tools/analisa/UbuntuIR.sh && sudo bash ./UbuntuIR.sh nama_instansi
    
  - After run, output saved to ./Collection.tar.gz
 
