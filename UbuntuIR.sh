@@ -1,17 +1,25 @@
 #! /bin/bash
 
 echo "************************************************************"
-echo "Automate Data Collection for Ubuntu Server Script v1.0"
+echo "Automate Data Collection for Compromise Assessment Script v1.0"
 echo "************************************************************"
 
 # Read Current Directory
 curr=${PWD}
 
 # Create Directory :
-mkdir $curr/UbuntuIR
+mkdir $curr/CATest
+mkdir $curr/CATest/UbuntuIR
+mkdir $curr/CATest/ThorLite
+mkdir $curr/CATest/Audit
 
 # Sesuaikan Directory
-dir=$curr/UbuntuIR
+dir=$curr/CATest/UbuntuIR
+dirThor=$curr/CATest/ThorLite
+dirAudit=$curr/CATest/Audit
+
+## Evidence Collector for Compromise Assessment
+echo "Compromise Assesment Processing!!"
 
 # Identifikasi Date :
 date > $dir/0.DateTime.txt
@@ -47,15 +55,35 @@ ls -alrt -R /home > $dir/19.Homedir.txt
 ls -alrt -R /var/www > $dir/20.VarWWWdir.txt
 
 # Searching Backdoor File
-echo "Start Searching ..."
+echo "Searching for Malicious Files..."
 grep -RPn "(passthru|shell_exec|system|phpinfo|base64_decode|chmod|mkdir|fopen|fclose|fclose|readfile) *\(" /home/ > $dir/21.Backdoor-Homedir.txt
 grep -RPn "(passthru|shell_exec|system|phpinfo|base64_decode|chmod|mkdir|fopen|fclose|fclose|readfile) *\(" /var/www/ > $dir/22.Backdoor-VarWWWdir.txt
-echo "Finish Searching.\n"
+
+# Searching others malicious activity
+grep -Rinw /home -e "slot" -e "gacor" -e "maxwin" -e "thailand" -e "sigmaslot" -e "zeus" -e "cuan" > $dir/23.ListSlot.txt
+echo "Finish Searching Malicious Files.\n"
+
+## Malware Scanner with Thor-Lite
+echo "Thor-Lite Processing!!"
+git clone https://github.com/adpermana/Thor-2.git $dirThor
+chmod +x $dirThor/thor-lite-linux
+cd $dirThor && ./thor-lite-linux -a Filescan --intense --norescontrol --cross-platform --alldrives -p /home/
+cd ../..
+
+## Audit System with Lynis and LinPEAS
+echo "Audit System Processing!!"
+git clone https://github.com/CISOfy/lynis $dirAudit
+cd $dirAudit && ./lynis audit system > $dirAudit/out-lynis.txt
+cd ../..
+mv lynis-report.dat $dirAudit
+mv lynis.log $dirAudit
+
+curl -L https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas.sh | sh > $dirAudit/out-linpeas.txt
 
 # Create Compressed File
-tar -czf Collection.tar.gz UbuntuIR
-rm -rf UbuntuIR
+tar -czf CATest.tar.gz CATest
+rm -rf CATest
 
 echo "************************************************************"
-echo "Script Completed Succesfully, saved to ./Collection.tar.gz"
+echo "Script Completed Succesfully, saved to ./CATest.tar.gz"
 echo "************************************************************"
