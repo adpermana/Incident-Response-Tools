@@ -1,8 +1,8 @@
 #! /bin/bash
 
-echo "************************************************************"
+echo "*****************************************************************"
 echo "Automate Data Collection for Compromise Assessment Script v1.0"
-echo "************************************************************"
+echo "*****************************************************************"
 
 # Read Current Directory
 curr=${PWD}
@@ -34,6 +34,8 @@ top -b -n 1 > $dir/4.Daftar_Running_App.txt
 cat /root/.bash_history > $dir/5.History.txt
 ls /etc/cron* > $dir/6.Cron.txt
 crontab -l > $dir/7.Crontab.txt
+ls -al /var/spool/cron/crontabs/ > $dir/7-1.Crontab-$1.txt
+bash -c 'for user in $(cut -f1 -d: /etc/passwd); do echo "Cron jobs for user: $user"; crontab -l -u $user; echo ""; done' > $dir/7-2.Crontab-$1.txt
 
 # Identifikasi Jaring Komunikasi
 netstat -tulnp > $dir/8.Inbound.txt
