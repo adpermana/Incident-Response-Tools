@@ -90,8 +90,8 @@ function get_history() {
 }
 
 # Loop semua user home dir
-for dir in /home/*; do
-    [ -d "$dir" ] && get_history "$dir"
+for i in /home/*; do
+    [ -d "$i" ] && get_history "$i"
 done
 get_history "/root"
 
