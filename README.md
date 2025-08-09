@@ -1,12 +1,14 @@
 -------------------------------------------------------
-# Incident Response Tools (Open Source Licenses)
+# Incident Response Tools (Open Source Licenses) v1.1
 -------------------------------------------------------
 
 # Automate Data Collection 
  - Run this shell script on your server :
-   * Ubuntu Server : curl -sO https://raw.githubusercontent.com/adpermana/Incident-Response-Tools/analisa/UbuntuIR.sh && sudo bash ./UbuntuIR.sh nama_instansi
+   * Ubuntu Server : curl -sO https://raw.githubusercontent.com/adpermana/Incident-Response-Tools/analisa/UbuntuIR.sh && sudo bash ./UbuntuIR.sh /path/to/scan
+   * Example
+     curl -sO https://raw.githubusercontent.com/adpermana/Incident-Response-Tools/analisa/UbuntuIR.sh && sudo bash ./UbuntuIR.sh /var/www/html
    
- - After run, output saved to ./Collection.tar.gz
+ - After run, output saved to "Collection.tar.gz" and files "*.html"
 
  # Automate Delete
  - Siapkan list malicious file yang akan dihapus
