@@ -74,7 +74,7 @@ ls -al /var/spool/cron/crontabs/ > $dir/7-1.Crontab.txt
 bash -c 'for user in $(cut -f1 -d: /etc/passwd); do echo "Cron jobs for user: $user"; crontab -l -u $user; echo ""; done' > $dir/7-2.Crontab.txt
 
 # Identifikasi history semua user
-history_users="5.History.txt"
+history_users="$dir/5.History.txt"
 function get_history() {
     local user_dir="$1"
     local user_name
