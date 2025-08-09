@@ -5,10 +5,11 @@
 # Automate Data Collection 
  - Run this shell script on your server :
    * Ubuntu Server : curl -sO https://raw.githubusercontent.com/adpermana/Incident-Response-Tools/analisa/UbuntuIR.sh && sudo bash ./UbuntuIR.sh /path/to/scan
-   * Example
+   * Example :
      curl -sO https://raw.githubusercontent.com/adpermana/Incident-Response-Tools/analisa/UbuntuIR.sh && sudo bash ./UbuntuIR.sh /var/www/html
    
  - After run, output saved to "Collection.tar.gz" and files "*.html"
+ - To extract : tar -xf Collection.tar.gz
 
  # Automate Delete
  - Siapkan list malicious file yang akan dihapus
