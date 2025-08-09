@@ -1,9 +1,17 @@
 #! /bin/bash
 
-echo "*****************************************************************"
-echo "Automate Data Collection for Compromise Assessment Script v1.1"
-echo "Added Function : ThorLite - linpeas - lynis"
-echo "*****************************************************************"
+echo "######################################################################"
+echo "#             .___                                                    "
+echo "# _____     __| _/_____   ___________  _____ _____    ____ _____      "
+echo "# \__  \   / __ |\____ \_/ __ \_  __ \/     \\__  \  /    \\__  \     "
+echo "#  / __ \_/ /_/ ||  |_> >  ___/|  | \/  Y Y  \/ __ \|   |  \/ __ \_   "
+echo "# (____  /\____ ||   __/ \___  >__|  |__|_|  (____  /___|  (____  /   "
+echo "#      \/      \/|__|        \/            \/     \/     \/     \/    "
+echo "#                                                                     "
+echo "# Automate Data Collection for Compromise Assessment Script v1.1      "
+echo "# Added Function : ThorLite - linpeas - lynis                         "
+echo "# https://github.com/adpermana/Incident-Response-Tools/tree/analisa   "
+echo "######################################################################"
 
 # Fungsi untuk memeriksa hak akses root
 check_root() {
