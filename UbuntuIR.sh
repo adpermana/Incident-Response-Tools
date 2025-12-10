@@ -155,7 +155,7 @@ git clone https://github.com/CISOfy/lynis $dirAudit
 cd $dirAudit && ./lynis audit system > $curr/CATest/out-lynis.txt
 cd ../..
 
-curl -L https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas.sh | sh > $curr/CATest/out-linpeas.txt
+#curl -L https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas.sh | sh > $curr/CATest/out-linpeas.txt
 
 echo "-----------------------------"
 echo "| Create Report *.html file |"
