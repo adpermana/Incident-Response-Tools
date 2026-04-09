@@ -84,6 +84,7 @@
 # IP Analysis
  - Whois IP Lookup : https://www.ultratools.com/tools/ipWhoisLookupResult
  - IP Analysis :
+    - https://www.virustotal.com/
     - https://www.ipalyzer.com/
     - https://www.ipvoid.com/
     - https://mxtoolbox.com/blacklists.aspx
